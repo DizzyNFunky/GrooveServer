@@ -21,8 +21,8 @@ function create_table() {
     }
 
     for(i = 0; i < songs_played.length; i++) {
-    		song = songs_played[i];
-    		played_table_row = $('<tr/>', {
+		song = songs_played[i];
+		played_table_row = $('<tr/>', {
             class: 'table_row'
         });
         played_table_row.appendTo(played_table_body)
@@ -35,15 +35,27 @@ function create_table() {
 
 function add_data_to_queue(data) {
 	alert(data);
+    // Only add the relevant parts of the data to an object
+    var new_song = {};
+    new_song['title'] = data['title'];
+    new_song['album'] = data['album'];
+    new_song['artist'] = data['artist'];
+    new_song['url'] = data['url'];
+    add_song(new_song);
 }
 
 function update_table() {
-		var song_table_body = $("#song_table_body");
+	var song_table_body = $("#song_table_body");
     song_table_body.empty();
     var played_table_body = $("#played_table_body");
     played_table_body.empty();
     create_table();
 };
+
+function add_song(song) {
+    songs_to_play.push(song);
+
+}
 
 $(document).ready(function() {
 	$('.song_table .table_data').oncontextmenu = function() {

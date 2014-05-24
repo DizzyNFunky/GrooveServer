@@ -11,7 +11,11 @@ class GrooveServer
 		when 'POST'
 			# Given a search to input into the grooveshark client
 			puts request.params
-			search_term = request.params['search_term']		
+			search_term = request.params['search_term']
+			searched_songs = @client.search_songs(search_term)
+			# Need to determine how many songs to send back here
+			# For now I will just send the first song back to the client
+			[200, {"Content-Type" => "text/json"}, searched_songs.first.to_json]
 		when 'PUT'
 			# Not sure how this will work yet, but potentially change song index here
 		when 'GET'
@@ -64,5 +68,7 @@ class GrooveServer
 end
 
 map '/groove_server' do
-	run GrooveServer.new
+	groove = GrooveServer.new
+	groove.init_client
+	run groove
 end
