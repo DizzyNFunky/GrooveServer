@@ -1,0 +1,135 @@
+html {
+	font-family: 'Lato', 'Open Sans', sans-serif;
+	background-color: black;
+	color: white;
+}
+
+#total_player_wrap {
+	width: 640px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.song_table {
+  width: 600px;
+  background-color: black;
+  color: white;
+}
+
+.song_table th {
+	width: 200px;
+	font-weight: 400;
+}
+
+.song_table td {
+	font-weight: 100;
+	font-size: 18px;
+	border-bottom: 1px solid white;
+}
+
+.song_table tbody tr:hover {
+	color: gray;
+}
+
+.song_table tr {
+	border: 2px solid white;
+}
+
+#played_table {
+	opacity: 0.8;
+}
+
+.table_title {
+	font-size: 24px;
+	font-weight: 100;
+}
+
+.spanned {
+	width: 100%;
+}
+
+#audio_info {
+	width: 100%;
+	height: 30px;
+	display: block;
+}
+
+#audio_info li {
+	display: inline;
+	list-style-type: none;
+	height: 30px;
+	padding-right: 20px;
+}
+
+#audio_play {
+	width: 600px;
+	height: 92px;
+	background-color: gray;
+	border: 2px solid white;
+	border-radius: 12px;
+}
+
+.control_wrap {
+	width: 100px;
+	height: 30px;
+	position: relative;
+	float: left;
+}
+
+#audio_controls {
+	width: 100%;
+	height: 30px;
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+	vertical-align: bottom;
+	display: block;
+	position: relative;
+}
+
+.control_wrap {
+	width: 25%;
+}
+
+#audio_controls a {
+	width: 100%;
+	display: block;
+	list-style-type: none;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	height: 30px;
+	position: absolute;
+	top: 8px;
+}
+
+#audio_controls a:visited {
+	color:white;
+}
+#audio_controls a:link {
+	color:white;
+}
+#audio_controls a:hover {
+	color:white;
+}
+#audio_controls a:active {
+	color:white;
+}
+
+.table_data {
+    text-align: center;
+}
+
+#search_bar {
+	width: 500px;
+	background-color: #dddddd;
+	border-radius: 5px;
+	font-family: 'Lato', 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+#search_submit {
+	width: 100px;
+	font-family: 'Lato', 'Open Sans', sans-serif;
+}

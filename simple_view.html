@@ -1,0 +1,99 @@
+<html>
+<head>
+    <link rel="stylesheet" href="simple_view.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+    <title> Grooveshark Server </title>
+</head>
+<body>
+    <div id="total_player_wrap">
+        <div id="search_wrapper">
+            <form id="serach_form">
+                <input type=search id="search_bar" placeholder="Search for songs here"/>
+                <input type=submit id="search_submit"/>
+            </form>
+        </div>
+        <div id="audio_play">
+            <ul id="audio_info">
+                <!-- Fill in this info with javascript -->
+            </ul>
+            <div id="audio_controls">
+                <div class="control_wrap">
+                    <a class="previous" href="#" title="Previous">
+                        Previous
+                    </a>
+                </div>
+                <div class="control_wrap">
+                <a class="play" href="#" title="Play">
+                    Play
+                </a>
+                </div>
+                <div class="control_wrap">
+                <a class="pause" href="#" title="Pause">
+                    Pause
+                </a>
+                </div>
+                <div class="control_wrap">
+                <a class="next" href="#" title="Next">
+                    Next
+                </a>
+                </div>
+            </div>
+            <audio class="html_audio" src="">
+                <p> Your browser does not support html5 audio </p>
+            </audio>
+        </div>
+        <table id="song_table" class="song_table">
+            <div class="spanned">
+                <div class="table_title">
+                    Songs Queued
+                </div>
+                <div class="table_control" id="song_clear">
+                    Clear Queue
+                </div>
+            </div>
+            <thead>
+                <th> Title </th>
+                <th> Artist </th>
+                <th> Album </th>
+            </thead>
+            <tbody id="song_table_body">
+                <!-- Fill in this table with javascript -->
+            </tbody>
+        </table>
+        <table id="played_table" class="song_table">
+            <div class="spanned">
+                <div class="table_title">
+                    Songs Played
+                </div>
+                <div class="table_control" id="played_clear">
+                    Clear Played Queue
+                </div>
+             </div>
+            <thead>
+                <th> Title </th>
+                <th> Artist </th>
+                <th> Album </th>
+            </thead>
+            <tbody id="played_table_body">
+            </tbody>
+        </table>
+        <script src="jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var songs_to_play = [];
+            var songs_played = [];
+            var test_song = {"title":"Happy",
+                    "artist":"Pharrell Williams",
+                    "album":"Despicable Me 2",
+                    "url":"32-Garden_of_the_Gods.mp3"};
+            var test_song_2 = {"title":"Can't Hold Us",
+                       "artist":"Macklemore",
+                       "album":"The Heist",
+                         "url":"17-Chronopolis.mp3"};
+            songs_to_play = [test_song, test_song_2];
+        </script>
+        <script src="table_fill.js" type="text/javascript"></script>
+        <script src="audio_playing.js" type="text/javascript"></script>
+    </div>
+</body>
+</html>
